@@ -32,16 +32,22 @@ module.exports = class IO {
             this.process.on('message', messageCallback);
             this.process.on('error', errorCallback);
             this.process.on('exit', exitCallback);
-        }).then(()=>{
-            return this.send({
-                action: 'config',
-                payload: config
-            })
+        });
+        this.send({
+            action: 'config',
+            payload: config
         });
     }
 
     ready(){
         return this.readyPromise;
+    }
+
+    setCyclesPerDay(cycles) {
+        return this.send({
+            action: 'cycle',
+            payload: Number(cycles)
+        });
     }
 
     send(data) {
