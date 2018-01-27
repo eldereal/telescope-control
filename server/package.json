@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.4.1",
+    "rpio2": "^0.4.1",
     "socket.io": "^2.0.4"
   }
 }
