@@ -29,7 +29,7 @@ process.on('message', message => {
 function setCyclesPerDay(cyclesPerDay){
     cyclesPerDay = Number(cyclesPerDay);
     if (Number.isFinite(cyclesPerDay)) {
-        if (Math.abs(cyclesPerDay) >= 1 && Math.abs(cyclesPerDay) <= 16) {
+        if (Math.abs(cyclesPerDay) >= 0.1 && Math.abs(cyclesPerDay) <= 16) {
             toggleInterval = 86400 * 1000 / (cyclesPerDay * reduction * steps * resolution * 2);
         } else {
             toggleInterval = 0;

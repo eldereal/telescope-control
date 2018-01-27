@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "koa": "^2.4.1",
-    "rpio2": "^0.4.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-static": "^4.0.2",
     "socket.io": "^2.0.4"
   }
 }
